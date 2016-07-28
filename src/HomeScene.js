@@ -47,7 +47,7 @@ var HomeMenuLayer = cc.Layer.extend({
             settingSpriteSelected,
             this.menuItemCallback, this);
         settingMenuItem.setTag(HomeMenuActionTypes.MenuItemSetting);
-/*
+
         // 帮助菜单
         var helppriteNormal = new cc.Sprite("#button.help.png");
         var helpSpriteSelected = new cc.Sprite("#button.help-on.png");
@@ -56,9 +56,9 @@ var HomeMenuLayer = cc.Layer.extend({
             helpSpriteSelected,
             this.menuItemCallback, this);
         helpMenuItem.setTag(HomeMenuActionTypes.MenuItemHelp);
-*/
+
         //var mu = new cc.Menu(startMenuItem, settingMenuItem, helpMenuItem);
-        var mu = new cc.Menu(settingMenuItem);
+        var mu = new cc.Menu(settingMenuItem, helpMenuItem);
         mu.x = winSize.width / 2;
         mu.y = winSize.height / 2;
         mu.alignItemsVerticallyWithPadding(10);
@@ -78,7 +78,7 @@ var HomeMenuLayer = cc.Layer.extend({
                 cc.log("StartCallback");
                 break;
             case HomeMenuActionTypes.MenuItemHelp:
-                tsc = new cc.TransitionFade(1.0, new HelpScene());cp.Body
+                tsc = new cc.TransitionFade(1.0, new HelpScene());
                 cc.log("HelpCallback");
                 break;
             case HomeMenuActionTypes.MenuItemSetting:
