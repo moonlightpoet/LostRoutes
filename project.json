@@ -19,6 +19,7 @@
         "src/SettingScene.js",
         "src/HelpScene.js",
         "src/GamePlayScene.js",
-        "src/Enemy.js"
+        "src/Enemy.js",
+        "src/Fighter.js"
     ]
 }
