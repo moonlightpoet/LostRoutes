@@ -17,6 +17,8 @@
         "src/SystemConst.js",
 		"src/HomeScene.js",
         "src/SettingScene.js",
-        "src/HelpScene.js"
+        "src/HelpScene.js",
+        "src/GamePlayScene.js",
+        "src/Enemy.js"
     ]
 }
