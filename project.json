@@ -20,6 +20,7 @@
         "src/HelpScene.js",
         "src/GamePlayScene.js",
         "src/Enemy.js",
-        "src/Fighter.js"
+        "src/Fighter.js",
+        "src/Bullet.js"
     ]
 }
