@@ -38,13 +38,13 @@ var Bullet = cc.PhysicsSprite.extend({
         this.spriteFrameName = spriteFrameName;
         this.space = space;
         this.setVisible(true);
-    },
-    create : function(spriteFrameName, space) {
-        if (cc.pool.hasObject(Bullet)) {
-            return cc.pool.getFromPool(Bullet, spriteFrameName, space);
-        } else {
-            return new Bullet(spriteFrameName, space);
-        }
     }
 });
 
+Bullet.create = function(spriteFrameName, space){
+    if(cc.pool.hasObject(Bullet)) {
+        return cc.pool.getFromPool(Bullet, spriteFrameName, space);
+    } else {
+        return new Bullet(spriteFrameName, space);
+    }
+}

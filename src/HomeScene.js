@@ -29,7 +29,6 @@ var HomeMenuLayer = cc.Layer.extend({
         end.y = end.getContentSize().height / 2;
         this.addChild(end);
 
-        /*
         // 开始菜单
         var startSpriteNormal = new cc.Sprite("#button.start.png");
         var startSpriteSelected = new cc.Sprite("#button.start-on.png");
@@ -38,7 +37,7 @@ var HomeMenuLayer = cc.Layer.extend({
             startSpriteSelected,
             this.menuItemCallback, this);
         startMenuItem.setTag(HomeMenuActionTypes.MenuItemStart);
-*/
+
         // 设置菜单
         var settingSpriteNormal = new cc.Sprite("#button.setting.png");
         var settingSpriteSelected = new cc.Sprite("#button.setting-on.png");
@@ -57,8 +56,7 @@ var HomeMenuLayer = cc.Layer.extend({
             this.menuItemCallback, this);
         helpMenuItem.setTag(HomeMenuActionTypes.MenuItemHelp);
 
-        //var mu = new cc.Menu(startMenuItem, settingMenuItem, helpMenuItem);
-        var mu = new cc.Menu(settingMenuItem, helpMenuItem);
+        var mu = new cc.Menu(startMenuItem, settingMenuItem, helpMenuItem);
         mu.x = winSize.width / 2;
         mu.y = winSize.height / 2;
         mu.alignItemsVerticallyWithPadding(10);
